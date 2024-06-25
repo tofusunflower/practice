@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //輸入[window.(prompt)]星期別代號，顯示星期;
+        let a = prompt('請輸入星期別代號:1-7');
+        //switch 無法用區間
+        //trim()=>去除內容前後多餘空白
+
+        switch(a.trim()){
+            case null:
+            alert('cancel');
+                break;
+            case '':
+            alert('請輸入代號');
+            break;
+        }
+        let Num = Number(a);
+        switch (Num) {
+            case 1:
+                document.write('Monday');
+                break;
+            case 2:
+                document.write('Tuesday');
+                break;
+            case 3:
+                document.write('Wednesday');
+                break;
+            case 4:
+                document.write('Thursday');
+                break;
+            case 5:
+                document.write('Friday');
+                break;
+            case 6:
+                document.write('Saturday');
+                break;
+            case 7:
+                document.write('Sunday');
+                break;
+            default:
+                document.write('輸入錯誤');
+                break; //switch中的最後一個break可以省略
+        }
+    </script>
+</body>
+
+</html>

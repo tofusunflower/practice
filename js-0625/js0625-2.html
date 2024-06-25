@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //血型判斷(大小寫不同)
+        //A=>A型
+        //a=>a型
+
+        //if-else-if
+        //switch
+
+        let type = prompt('enter your blood type');
+        //trim()=>去除內容前後多餘空白
+        //去除多餘空白，再重新指派回blood變數
+
+        if (type == null) { //是否按了取消
+            document.write('cancel');
+        }
+
+        let bloodType = type.toUpperCase();//大寫
+        //變數名.toLowerCase()變小寫
+
+        if (bloodType === 'A') {
+            document.write('Type A');
+        } else if (bloodType === 'B') {
+            document.write('Type B');
+        } else if (bloodType === 'AB') {
+            document.write('Type AB');
+        } else if (bloodType === 'O') {
+            document.write('Type O');
+        } else if (type.trim() == '') { //去除空白後的結果是沒有內容
+            document.write('尚未輸入');
+        }else {
+            document.write('error');//以上皆非的情況
+        }
+
+
+        document.write('<br>')
+
+        let type2 =prompt('plz enter ur blood type')
+
+        if(type2 == null){
+            document.write('cancel');
+        }else{
+            switch(type2.trim()){
+            case 'A':
+            case 'a':
+            document.write('Type A');
+            break;
+            case 'B':
+            case 'b':
+            document.write('Type B');
+            break;
+            case 'O':
+            case 'o':
+            document.write('Type O');
+            break;
+            case 'AB':
+            document.write('Type AB');
+            break;
+            default:
+                //以上都不是
+            document.write('error');
+        }
+        }
+
+        
+
+    </script>
+</body>
+
+</html>
