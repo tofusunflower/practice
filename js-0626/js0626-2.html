@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //使用迴圈的前提
+        //1. 連續執行一樣的程式敘述
+        //2.有規律性
+        //for()=>已知執行次數
+        //for(參數1;參數2;參數3)
+        //參數1:迴圈計數器變數起始值
+        //參數2:執行迴圈的條件
+        //參數3:每次執行迴圈後，計數器變數的增減值
+
+        //ex:1在畫面上顯示5次hello
+        // for (let i = 1; i <= 5; i++) {
+        //     document.write('hello<br>');
+        // }
+        // document.write('<hr>');
+
+        // //顯示數字10-15
+        // for (let i = 1; i <= 6; i++) {
+        //     document.write(i + 9);
+        // }
+        // document.write('<hr>');
+
+        // for (let i = 10; i <= 15; i++) {
+        //     document.write(i + '<br>');
+        // }
+        // document.write('<hr>');
+
+
+        // //此處的i純粹為執行的次數，與值無關    
+        // let a = 10;
+        // for (let i = 1; i <= 6; i++) {
+        //     document.write(a);
+        //     a++;
+        // }
+
+        // document.write('<hr>');
+
+        // //a++
+        // //先顯示再+1
+
+        // //++a
+        // //先+1再顯示
+
+        // let b = 9;
+        // for (i = 1; i <= 6; i++) {
+        //     document.write(++b + ',');
+        // }
+
+        // document.write('<hr>');
+
+        //ex3 顯示1-10的奇數
+
+        // for(i=1;i<=5;i++){
+        //     document.write(2*i-1);
+        // }
+
+        //     document.write('<hr>');
+
+        // for(i=1;i<=5;i++){
+        //     document.write(2*i);
+        // }
+
+        //     document.write('<hr>');
+
+        // for(let i =1;i<=10;i++){
+        //     if(i%2===1){
+        //         document.write(i+'');
+        //     }
+        // }
+        //         document.write('<hr>');
+
+        // for (let i = 1; i <= 10; i++) {
+        // if (i%2 === 0 && i != 10) {
+        //     document.write(i+',');
+        // }else if(i%2 === 0 && i == 10){
+        //     document.write(i);
+        // }
+        //     if (i % 2 === 0) {
+        //         if (i === 10) {
+        //             document.write(i);
+        //         } else {
+        //             document.write(i + ',');
+        //         }
+        //     }
+        // }
+        // document.write('<hr>');
+
+
+        //ex5請用一個迴圈，找出1-10之間3的倍數與5的倍數，迴圈後顯示結果
+
+
+        // let a ='';
+        // let b ='';
+        // for (let i = 0; i <= 10; i++) {
+        //     if (i % 3 === 0) {
+        //         a+=i.toString();
+        //     }
+        //     if (i % 5 === 0) {
+        //         b+=i.toString();
+        //     }
+        // }
+
+        //i+=2
+        //i=i+2
+
+        // let a = [];
+        // let b = [];
+        // for (let i = 0; i <= 10; i++) {
+        //     if (i % 3 === 0) {
+        //         a.push(i);
+        //  document.write(a);
+
+        // ex7 彈出輸入視窗，輸入運算起始值，輸入運算結束值，算出奇數合、偶數合
+
+        enter = Number(prompt('enter start value')); //4
+        end = Number(prompt('enter end value'));  //1
+
+
+        if (end < enter) {
+            let tmp = enter;//tmp=4
+            enter = end;//enter=1
+            end = tmp;//end=4
+        }
+
+
+        let even =0;
+        let odd = 0;
+
+        for (let i = enter; i <= end; i++) {
+            if (i % 2 === 0) {
+                even += i;
+            } else {
+                odd += i;
+            }
+        }
+        document.write('odd sum = ' + `${odd}`);
+        document.write('<hr>');
+        document.write('even sum =' + `${even}`);
+
+
+
+    </script>
+</body>
+
+</html>
