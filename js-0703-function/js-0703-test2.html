@@ -37,8 +37,19 @@
             let Num = (prompt('enter score'));//輸入成績
             if (Num === null || Num === '-1') {//取消或-1
                 break;
-            } else {
-                let Score = Number(Num);
+            }
+            
+            //是否為非數字
+            if(isNaN(Num)){
+                continue;
+            }
+
+            else {
+                Score = Number(Num);
+                if(Score<0||Score>100){
+                    alert('分數有效範圍為0~100，請重新輸入');
+                    continue;
+                }
                 document.write(`第${count}次分數:${Score}<br>`);
                 total += Score;
 
