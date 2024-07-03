@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 設計一個可四則運算的計算機
+        function calc(a,b,c){
+            a=Number(a);
+            b=Number(b);
+            // 處理四則運算結果
+            if (c =='+'){
+                document.write(`${a}+${b}=${a+b}`);
+            }
+            else if (c =='-'){
+                document.write(`${a}-${b}=${a-b}`);
+            }else if (c =='*'){
+                document.write(`${a}*${b}=${a*b}`);
+            }else if (c =='/'){
+                document.write(`${a}/${b}=${(a/b).toFixed(2)}`);
+            }
+            else(
+                document.write('運算符號不存在')
+            )
+        }
+        // 使用輸入視窗產生任意兩數與運算式符號
+
+        
+        let n1 = prompt('enter a number');
+        if(n1==null){
+            document.write('cancel');
+
+            }else if(isNaN(n1)){
+            document.write('請輸入數字');
+
+        }else {
+            let n2 = prompt('enter a number');
+
+            if(n2==null){
+            document.write('cancel');
+                }else if(isNaN(n2)){
+            document.write('請輸入數字');
+        }else{
+            let ari = prompt('請輸入+、-、*、/');
+            calc(n1,n2,ari);
+        }
+        }
+
+        
+        
+
+        // if (prompt('enter a number')!=Number((prompt('enter a number')))){
+        //     document.write('請輸入數字');
+        // }else{
+        //     let n2 = Number(prompt('enter a number'));
+        // }
+
+        
+        // 最後再呼叫
+
+    </script>
+</body>
+</html>

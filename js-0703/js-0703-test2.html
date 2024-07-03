@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 請輸入成績N次，直到輸入-1或取消就結束
+        /* 
+        第1次分數：90
+        第2次分數：50
+        第3次分數：60
+        第4次分數：-1
+        ------------
+        及格人數：2人
+        不及格人數：1人
+        總分：200(不含-1)分
+        總平均：取到小數點兩位 66.67分
+        */
+
+
+        //這裡是顯示不及格人數和及格人數
+
+        let p = 0;//及格人數
+        let f = 0;//不及格人數
+        let count = 1;//輸入幾次
+        let total = 0;//總分
+        let average = 0;//平均
+
+
+        //永遠成立
+        while (true) {
+            let Num = (prompt('enter score'));//輸入成績
+            if (Num === null || Num === '-1') {//取消或-1
+                break;
+            } else {
+                let Score = Number(Num);
+                document.write(`第${count}次分數:${Score}<br>`);
+                total += Score;
+
+                if (Score >= 60) {
+                    p++;
+                } else {
+                    f++;
+                }
+                average = (total / (p + f)).toFixed(2);
+            }
+            count++;
+
+        }
+
+        document.write('------------<br>');
+        document.write('總分:' + total + '<br>');
+        document.write('總平均:' + average + '<br>');
+        document.write(`及格人數: ${p}<br>`);
+        document.write(`不及格人數: ${f}<br>`);
+
+
+
+        // while(true){
+        //     let score = prompt('enter your score');
+        //     if(score === '-1' || score == null){
+        //         break;
+        //     }
+        //     document.write(score + '<br>');
+        //     count++;
+        //     document.write(`第${count}次分數:${Score}<br>`);
+        // }
+
+    </script>
+</body>
+
+</html>

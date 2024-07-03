@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 有參數，有傳回值
+        function score(intScore){
+            if(intScore>=60){
+                return 'pass';//結束函式，並且把結果往外傳出去
+            }else {
+                return 'fail';
+            }
+        }
+
+        let Num = Number(prompt('enter score'));
+        let result = score(Num);
+        document.write('分數1'+ result);
+
+
+        let score = Number(prompt('請輸入分數'));
+        result = score(Num);
+        document.write('分數2'+ result);
+
+    </script>
+</body>
+</html>
