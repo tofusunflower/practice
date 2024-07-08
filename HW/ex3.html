@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 猜數字：直到猜對才結束
+        // 用亂數產生一個值：60
+        // 輸入資訊顯示console.log()
+        // 第1次：50 => 太小了（提示：50-100）
+        // 第2次：90 => 太大了（提示：50-90）
+        // 第3次：80 => 太大了（提示：50-80）
+        // 第4次：55 => 太小了（提示：55-80）
+        // 第5次：60 => 猜對了
+
+        // console.log(Math.floor(Math.random()*100)); // 回傳 0 ~ 99
+        // console.log(Math.floor(Math.random()*100)+1); // 回傳 1 ~ 100
+        // 產生亂數給變數bingoNum
+        // let bingoNum = Math.floor(Math.random() * 100) + 1;
+        // console.log(bingoNum);
+
+        let bingoNum = 60;
+        // console.log(bingoNum);
+
+        let i = 1; //猜的次數
+        let num1 = 1; // 提示範圍的最小值，每次猜完會更新
+        let num2 = 100; // 最大值
+
+        function playGame(){
+
+        while (true) {
+            let guess = prompt('Guess the number');
+
+            if (guess === null) {
+                console.log('Game canceled');
+                break;
+            }
+
+            guess = Number(guess);
+
+            if (guess > bingoNum) {
+                num2 = guess; // 更新最大值
+                console.log(`第${i}次：${guess} 太大了（提示：${num1}-${num2}）`);
+            } else if (guess < bingoNum) {
+                num1 = guess; // 更新最小值
+                console.log(`第${i}次：${guess} 太小了（提示：${num1}-${num2}）`);
+            } else {
+                console.log(`第${i}次：${guess} 猜對了！`);
+                break;
+            }
+
+            i++;
+        }
+        }
+
+        playGame();
+    </script>
+</body>
+
+</html>

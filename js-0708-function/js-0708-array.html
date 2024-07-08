@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 陣列array
+        // 一維陣列
+        // 二維陣列
+        // 多維陣列
+        // 每個陣列中的值都有編號(索引值)，預設編號從0開始
+        let arr1 = [50, 90, 100, 30, 60];
+        // console.log(arr1.length);
+        // console.log(arr1[2]);
+        // // 更改陣列值：
+        // arr1[2] = 99;
+
+        // // 請使用迴圈顯示arr1所有編號值
+        // tot=0;
+        // for (let i = 0; i < arr1.length; i++) {
+        //     console.log(arr1[i]);
+        //     tot = tot + arr[i];
+        // }
+
+        //請按照順序
+        // function numberCompare(num1, num2) {
+        //     return num1 - num2;
+        // }
+        // console.log(arr1.sort(numberCompare));
+
+
+         //找出最大值、最小值
+         let max=arr1[0];
+         let min=arr1[0];
+         for(let i = 0; i < arr1.length; i++){
+            if(arr1[i]>max){
+                max=arr1[i];
+            }else if(arr1[i]<min){
+                min=arr1[i];
+            }
+         }
+        console.log(`max=${max}`);
+        console.log(`min=${min}`);
+
+
+
+    </script>
+</body>
+
+</html>
