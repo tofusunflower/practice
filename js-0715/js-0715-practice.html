@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let arr = [];
+       
+
+        while (arr.length < 6) {
+            let num = Math.floor(Math.random() * 49 + 1);
+            if (arr.includes(num) == false) {
+                arr.push(num);
+            }
+        }
+
+        let specialNum = Math.floor(Math.random() * 49 + 1);
+
+
+        function NumberCompare(num1, num2) {
+            return num1 - num2;
+        }
+        arr.sort(NumberCompare);
+
+        console.log(`號碼：${arr}`);
+        console.log(`特別號：${specialNum}`);
+
+
+
+        
+
+
+    </script>
+</body>
+
+</html>
