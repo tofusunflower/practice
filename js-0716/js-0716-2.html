@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 建立函式：取亂數
+        function getRandNum(max) {
+            return Math.floor(Math.random() * max) + 1
+        }
+
+        function getLotNum(item, count, no1, no2 = 0) {
+            let arrNum = [];
+            let i = 0;
+            while (i < count) {
+                let lotNum = getRandNum(no1);
+                if (arrNum.indexOf(lotNum) == -1) {
+                    arrNum.push(lotNum);
+                    i++;
+                }
+            }
+
+            arrNum.sort((num1, num2) => {
+                return
+                num1 - num2
+            });
+            console.log(arrNum);
+
+            if (item == '1' || item == '2') {
+                let speNum = getRandNum(no2);
+                console.log('第二區' + speNum);
+            }
+        }
+
+        // 產生大樂透號碼
+        // 產生威力彩號碼1-38挑6個
+        // 今彩539 1-39挑5個
+
+        let lotGameNo = prompt('請輸入樂透號碼代號 =>\n1.大樂透 2.威力彩 3. 今彩539');
+        switch (lotGameNo) {
+            case '1':
+                getLotNum('1', 6, 49, 49);
+                break;
+            case '2':
+                getLotNum('2', 6, 38, 8);
+                break;
+            case '3':
+                getLotNum('3', 5, 39);
+                break;
+            default:
+                console.log('err')
+                break;
+        }
+
+    </script>
+</body>
+
+</html>

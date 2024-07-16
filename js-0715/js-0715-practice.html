@@ -11,7 +11,7 @@
     <script>
 
         let arr = [];
-       
+
 
         while (arr.length < 6) {
             let num = Math.floor(Math.random() * 49 + 1);
@@ -28,12 +28,39 @@
         }
         arr.sort(NumberCompare);
 
+        // arrNum.sort(a, b)((a, b) => {
+        //     return a - b;
+        // })
+
         console.log(`號碼：${arr}`);
         console.log(`特別號：${specialNum}`);
 
 
 
-        
+        let arrNum = [];
+
+        for (let i = 0; i < 6; i++) {
+            let lotNum = Math.floor(Math.random() * 49 + 1);
+            if (arrNum.indexOf(lotNum) == -1) {
+                arrNum.push(lotNum);
+            } else {
+                console.log(`編號${i}位置${lotNum}重複了`)
+                i = i - 1;
+            }
+        }
+
+
+
+        let i = 0;
+        while (i < 6) {
+            let lotNum = Math.floor(Math.random() * 49 + 1);
+            if (arrNum.indexOf(lotNum) == -1) {
+                arrNum.push(lotNum);
+                i++;
+            } else {
+                console.log(`編號${i}位置${lotNum}重複了`)
+            }
+        }
 
 
     </script>
