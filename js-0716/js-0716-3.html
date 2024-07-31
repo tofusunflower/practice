@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 建立物件
+        // 方法一：實體化
+        let userName = 'miso';
+        let userAge = 2;
+        function sayHi() {
+            console.log(`hi i am ${userName}`)
+        }
+        sayHi();
+
+
+        // 方法二：建構子
+        let user = {
+            name: 'miso',
+            age: 2,
+            sayHi: function(){
+                // this. => 目前同一物件中的屬性
+                console.log(`hi i am ${this.name},今年${this.age}歲`)
+            }
+        }
+
+        console.log(user.name);
+        console.log(user.age);
+        console.log(user['name']);
+        user.sayHi();
+        // 修改物件中的年齡屬性
+        user.age=10;
+        console.log(user.age);
+
+        // 刪除物件中的年齡屬性
+        delete user.age;
+
+        // 建立物件方法二：建構子(new)
+        // 1. 使用new建立一個空物件object
+        let mobile = new Object();
+
+        // 建立屬性或方法
+        // 建立品牌屬性
+        mobile.brand = 'iphone';
+        // 建立顏色屬性
+        mobile.color = 'black';
+        // 建立尺寸屬性
+        mobile.size ='14';
+        // 建立方法(沒有傳回值)
+        mobile.showMsg=function(){
+            console.log(`品牌：${this.brand}, 色彩：${this.color},尺寸：${this.size}`)
+        }
+
+        // 呼叫物件方法(有傳回值)
+        // return `品牌：${this.brand}, 色彩：${this.color},尺寸：${this.size}`
+
+        // 呼叫物件屬性
+        console.log(mobile.brand);
+
+        // 呼叫物件方法(沒有傳回值)
+        mobile.showMsg();
+
+        // 呼叫物件方法(有傳回值)
+        console.log(mobile.showMsg());
+    </script>
+</body>
+
+</html>
