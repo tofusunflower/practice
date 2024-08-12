@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 當游標離開文字方塊時，撿查輸入的內容不足5個字時，顯示訊息 -->
+     <form>
+        <label for="uid">會員編號</label>
+        <!-- size => 文字方塊寬度 -->
+         <!-- maxlength => 限定字數 -->
+        <input type="text" id="uid" size="10" maxlength="5"><br>
+        <span id="id" class="errMsg"></span><br>
+        <input type="submit" value="送出">
+     </form>
+</body>
+</html>

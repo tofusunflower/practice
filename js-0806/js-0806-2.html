@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        marquee{
+            width: 500px;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- 跑馬燈效果 -->
+    <!-- behavior => 捲動方式
+        預設為:scroll
+        左右來回:alternate
+        只移動一次:slide 
+    -->
+     <div class="wrap">
+        <marquee behavior="alternate" scrollamount="10"
+     onmouseover="stop();"
+     onmouseout='start()'>
+        \day6/
+     </marquee>
+     </div>
+     
+</body>
+</html>

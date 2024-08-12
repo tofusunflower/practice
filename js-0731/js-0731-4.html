@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="">
+        <input type="text" id="content">
+        <input type="button" value="add" id="btn">
+    </form>
+
+    <ul>
+        <li>HTML</li>
+    </ul>
+
+    <script>
+        // 取得文字方塊內容
+        let content = document.getElementById('content');
+        // 取得按鈕
+        let btn = document.getElementById('btn');
+        btn.addEventListener('click', () => {
+            // 建立新節點=>li
+            let newElm = document.createElement('li');
+            // 建立文字節點=>文字方塊內容
+            // let newText = document.createTextNode(content.value);
+            // 將文字節點加入到新節點
+            newElm.appendChild(document.createTextNode(content.value));
+            // 取得要加入新節點的位置
+            // let getUl = document.getElementsByTagName('ul');
+            let getUl = document.querySelector('ul');
+            // 將新節點加入到ul元素的最後一個子節點
+            getUl.appendChild(newElm);
+        })
+
+    </script>
+</body>
+
+</html>

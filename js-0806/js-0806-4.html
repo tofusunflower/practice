@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span onclick="changeToAbout();">about me</span>
+        <span onclick="changeToExps();">experience</span>
+        <span onclick="changeToCon();">contact me</span>
+        <span onclick="changeToNews();">news</span>
+    </div>
+    <hr>
+    <div id="about">我有兩包小泡芙</div>
+    <div id="exps" style="display:none;">我無所事事</div>
+    <div id="contact" style="display:none;">不要打給我 我要吃披薩</div>
+    <div id="news" style="display:none;">準備回家啦</div>
+
+    <script>
+        let aboutDiv = '';
+        let expsDiv = '';
+        let conDiv = '';
+        let news = '';
+
+        function getDiv() {
+            aboutDiv = document.querySelector('#about');
+            expsDiv = document.querySelector('#exps');
+            conDiv = document.querySelector('#contact');
+            newsDiv = document.querySelector('#news');
+
+            aboutDiv.style.display = 'none';
+            expsDiv.style.display = 'none';
+            conDiv.style.display = 'none';
+            newsDiv.style.display = 'none';
+        }
+        // about me
+        function changeToAbout() {
+            getDiv();
+            aboutDiv.style.display = 'block';
+        }
+
+        // experience
+        function changeToExps() {
+            getDiv();
+            expsDiv.style.display = 'block';
+        }
+
+        function changeToCon() {
+            getDiv();
+            conDiv.style.display = 'block';
+        }
+
+        function changeToNews() {
+            getDiv();
+            newsDiv.style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
