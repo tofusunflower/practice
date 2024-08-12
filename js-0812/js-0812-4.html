@@ -26,20 +26,32 @@
     <script>
         // 會員編號
         let uid = document.getElementById('uid');
-        uid.addEventListener('blur', function () {
+        uid.addEventListener('blur', function (e) {
+            checkData(e, 5, '會員編號')
+        });
+
+
+        // 會員手機號碼
+        let mobile = document.getElementById('mobile');
+        mobile.addEventListener('blur', function (e) {
+            checkData(e, 10, '手機號碼')
+        });
+
+        // 共用的檢查字數的函式
+        function checkData(e, numLength, label) {
             // alert('游標離開了');
             // 取得errMsg的位置
             let errMsg = document.getElementById('errMsg');
 
-            // 檢查文字方塊內容是否有5個字
-            if (this.value.length != 5) {
+            // 檢查文字方塊內容是否有幾個字
+            if (e.target.value.length != numLength) {
                 // 若沒有，則顯示提醒訊息
-                errMsg.textContent = '字數必須為5個字'
+                errMsg.textContent = `${label}必須為${numLength}個字`
             } else {
-                // 若有5個字就清除提醒訊息
+                // 若有numLength個字就清除提醒訊息
                 errMsg.textContent = '';
             }
-        })
+        }
     </script>
 </body>
 
