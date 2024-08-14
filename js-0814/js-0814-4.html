@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btnOpen "onlcick ='openNewwindow'>開啟新視窗</button>
+    <button id="btnClose "onlcick ='closeNewwindow'>關閉新視窗</button>
+
+    <script>
+        function openNewwindow(){
+            // 開新視窗
+            window.open('./new.html','myWin','height=200, width=400');
+        }
+
+        function closeNewwindow(){
+            // 關閉視窗
+            if(myWin.close());
+        }
+    </script>
+</body>
+</html>

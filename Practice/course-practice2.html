@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <select id="url">
+            <option value="">請選擇</option>
+            <option value="https://youtu.be/O3HgEKbChZQ?si=5A2JPcy640PGSdx4">youtube</option>
+            <option value="https://cn.thejypshop.com/category/photo/168/">JYP</option>
+            <option value="https://www.instagram.com/day6kilogram/">IG</option>
+        </select>
+    </form>
+    <hr>
+    <form id="myform">
+        <input type="checkbox" id="agree"> 我同意合約
+        <br>
+        <span id="errmsg"></span>
+        <br>
+        <input type="submit" value="送出">
+    </form>
+    
+    <script>
+        let url = document.getElementById('url');
+        let a = ''; // 保存網址
+    
+        url.addEventListener('change', function() {
+            a = url.value;
+        });
+    
+        let myform = document.getElementById('myform');
+        let agree = document.getElementById('agree');
+        let errmsg = document.getElementById('errmsg');
+    
+        myform.addEventListener('submit', function(e) {
+            // 阻止表單默認的提交
+            e.preventDefault();
+    
+            if (!agree.checked) {
+                errmsg.textContent = '必須核取「我同意合約」';
+            } else if (a !== '') {
+                // 如果用户選擇了 URL 並同意合約，則跳轉到指定 URL
+                location.href = a;
+            } else {
+                errmsg.textContent = '請選擇一個網站';
+            }
+        });
+    </script>
+    
+    
+</body>
+</html>
