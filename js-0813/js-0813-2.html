@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #myDiv {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            margin-bottom: 20px;
+            margin-top: 50px;
+            margin-left: 50px;
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="wrap">
+        <div id="myDiv"></div>
+        <button id="red">紅</button>
+        <button id="green">綠</button>
+        <button id="blue">'藍</button>
+    </div>
+
+    <script>
+        
+        
+        let green = document.getElementById('green');
+        let blue = document.getElementById('blue');
+        
+        red.addEventListener('click',()=>{
+            let color =document.getElementById('myDiv');
+            let red = document.getElementById('red');
+            color.style.backgroundColor = 'red';
+            color.textContent=red.innerHTML;
+        })
+        
+    </script> -->
+
+    <div class="wrap">
+        <div id="myDiv"></div>
+        <button onclick='changeColor("r");' id="red">紅</button>
+        <button onclick='changeColor("g");' id="green">綠</button>
+        <button onclick='changeColor("b");' id="blue">藍</button>
+    </div>
+
+    <script>
+
+        function changeColor(color) {
+            let myDiv = document.getElementById('myDiv');
+            switch (color) {
+                case 'r':
+                    myDiv.style.backgroundColor = 'red';
+                    myDiv.textContent = red.innerHTML;
+                    break;
+                case 'g':
+                    myDiv.style.backgroundColor = 'green';
+                    myDiv.textContent = green.innerHTML;
+                    break;
+                case 'b':
+                    myDiv.style.backgroundColor = 'blue';
+                    myDiv.textContent = blue.innerHTML;
+                    break;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

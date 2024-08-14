@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="time9">9:00</button>
+    <button id="time10">10:00</button>
+    <button id="time11">11:00</button>
+    <button class="check">確認</button>
+    
+    <style>
+        #time9:focus{
+            background-color: #faa;
+        }
+        .check:active{
+            background-color: transparent;
+        }
+    </style>
+
+    <script>
+        let btn9 = document.getElementById('time9');
+        btn9.addEventListener('click',function(){
+            window.localStorage.setItem('time',btn9.innerHTML);
+        })
+
+        let checkBtn = document.getElementsByClassName('check')[0];
+        checkBtn.addEventListener('click',function(){
+            window.location.href = './course-practice-1-form.html';
+        })
+    </script>
+</body>
+</html>
